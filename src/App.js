@@ -36,10 +36,10 @@ const App = () => {
   return (
     <div
       className="text-white min-h-screen bg-dark-blue
-                    text-center pt-40"
+                    text-center pt-40 px-4"
     >
       <div
-        className="bg-dark-grayish-blue rounded-lg p-6
+        className="bg-dark-grayish-blue rounded-lg p-6 
                       max-w-md relative space-y-4 mx-auto"
       >
         <h1 className="font-semibold">{slip.id}</h1>
@@ -57,7 +57,7 @@ const App = () => {
           className="bg-neongreen aspect-square w-12
                       mx-auto rounded-full absolute
                       left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2
-                      grid place-items-center"
+                      grid place-items-center hover:shadow-neon transition-shadow"
         >
           <img className="w-5" src={dice} alt="dice icon" />
         </button>

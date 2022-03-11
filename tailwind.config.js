@@ -9,6 +9,9 @@ module.exports = {
         "dark-grayish-blue": "hsl(217, 19%, 24%)",
         "dark-blue": "hsl(218, 23%, 16%)",
       },
+      boxShadow: {
+        neon: "0px 0px 20px 2px hsl(150, 100%, 66%)",
+      },
     },
   },
   plugins: [],
