@@ -39,18 +39,19 @@ const App = () => {
                     text-center pt-40 px-4"
     >
       <div
-        className="bg-dark-grayish-blue rounded-lg p-6 
+        className="bg-dark-grayish-blue rounded-lg p-8 
                       max-w-md relative space-y-4 mx-auto"
       >
-        <h1 className="font-semibold">{slip.id}</h1>
+        <h1 className="font-bold text-xs text-neongreen tracking-[.15rem]">
+          ADVICE #{slip.id}
+        </h1>
         <h1 className="text-xl font-bold text-light-cyan">
           <FontAwesomeIcon className="w-2 pb-1 px-1" icon={faQuoteLeft} />
-
-          {slip.advice ?? "Loading..."}
+          {load ? "Loading..." : slip.advice}
           <FontAwesomeIcon className="w-2 pb-1 px-1" icon={faQuoteRight} />
         </h1>
 
-        <img className="pt-4 pb-7" src={divider} alt="divider" />
+        <img className="pt-2 pb-7" src={divider} alt="divider" />
         <button
           onClick={btnClickHandler}
           disabled={disableBtn}
@@ -59,7 +60,11 @@ const App = () => {
                       left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2
                       grid place-items-center hover:shadow-neon transition-shadow"
         >
-          <img className="w-5" src={dice} alt="dice icon" />
+          <img
+            className={`w-5 ${disableBtn ? "animate-spin" : ""}`}
+            src={dice}
+            alt="dice icon"
+          />
         </button>
       </div>
     </div>
